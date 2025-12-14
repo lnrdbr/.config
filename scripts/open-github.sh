@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 
 cd $(tmux run "echo #{pane_start_path}")
-url=$(git remote get-url origin) 
+url=$(git remote get-url origin)
+url=$(echo "$url" | xargs)
 
 if [[ $url == *github.com* ]]; then
     if [[ $url == git@* ]]; then
-        url="${url#git@}"
-        url="${url/:/\/}" 
+       url="${url#git@}"
+		url="${url/:/\/}" 
         url="https://$url"
     fi
     open "$url"

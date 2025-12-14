@@ -1,7 +1,7 @@
 which -s brew
 if [[ $? != 0 ]] ; then
 # Install Homebrew
-	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 	echo >> /Users/leonard/.zprofile
 	echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> /Users/leonard/.zprofile
 	eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -10,7 +10,7 @@ else
 fi
 
 brew bundle check || brew bundle install
-
+d=$(brew --prefix zathura)/lib/zathura ; mkdir -p $d ; for n in cb djvu pdf-mupdf pdf-poppler ps ; do p=$(brew --prefix zathura-$n)/lib$n.dylib ; [[ -f $p ]] && ln -s $p $d ; done
 ln -s ~/.config/zsh/.zshrc ~/.zshrc
 bob use nightly
 

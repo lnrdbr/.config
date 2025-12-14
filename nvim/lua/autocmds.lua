@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 local augroup = vim.api.nvim_create_augroup
 local autocmd = vim.api.nvim_create_autocmd
 
@@ -74,6 +75,9 @@ autocmd("BufWritePre", {
 augroup("FileTypeSettings", { clear = true })
 autocmd("FileType", {
 	group = "FileTypeSettings",
+=======
+vim.api.nvim_create_autocmd("FileType", {
+>>>>>>> 3e64678 (Working config)
 	pattern = "typst",
 	callback = function()
 		vim.opt_local.wrap = true
@@ -82,6 +86,7 @@ autocmd("FileType", {
 		vim.opt_local.spelllang = "en_gb"
 	end,
 })
+<<<<<<< HEAD
 autocmd("FileType", {
 	group = "FileTypeSettings",
 	pattern = { "markdown", "text", "gitcommit" },
@@ -101,5 +106,18 @@ autocmd("TermOpen", {
 		vim.opt_local.relativenumber = false
 		vim.opt_local.signcolumn = "no"
 		vim.cmd("startinsert")
+=======
+
+vim.api.nvim_create_autocmd("InsertLeave", {
+	callback = function()
+		vim.opt.hlsearch = false
+	end,
+})
+
+vim.api.nvim_create_autocmd("CmdlineEnter", {
+	pattern = { "/", "?" },
+	callback = function()
+		vim.opt.hlsearch = true
+>>>>>>> 3e64678 (Working config)
 	end,
 })
