@@ -9,13 +9,9 @@ vim.pack.add({
 	{ src = "https://github.com/mason-org/mason-lspconfig.nvim" },
 	{ src = "https://github.com/nvim-treesitter/nvim-treesitter" },
 	{ src = "https://github.com/folke/todo-comments.nvim" },
-<<<<<<< HEAD
 	{ src = "https://github.com/L3MON4D3/LuaSnip" },
 	{ src = "https://github.com/windwp/nvim-autopairs" },
 	{ src = "https://github.com/windwp/nvim-ts-autotag" },
-	{ src = "https://github.com/ziontee113/icon-picker.nvim" },
-=======
->>>>>>> 3e64678 (Working config)
 })
 
 -- Plugin configurations
@@ -33,7 +29,6 @@ require("oil").setup({
 		["g."] = { "actions.toggle_hidden", mode = "n" },
 	}
 })
-<<<<<<< HEAD
 
 local npairs = require("nvim-autopairs")
 local Rule = require("nvim-autopairs.rule")
@@ -113,12 +108,3 @@ require("blink.cmp").setup({
 	},
 	snippets = { preset = "luasnip" },
 })
-
-require("icon-picker").setup({
-		disable_legacy_commands = true
-})
-vim.keymap.set("n","<leader>i","<cmd>IconPickerNormal nerd_font<cr>")
-vim.keymap.set("i","<C-i>","<cmd>IconPickerNormal nerd_font<cr>")
-
-=======
->>>>>>> 3e64678 (Working config)

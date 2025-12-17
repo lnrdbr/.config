@@ -15,10 +15,7 @@ require('nvim-treesitter.configs').setup({
 		"bash",
 		"markdown",
 		"typst",
-<<<<<<< HEAD
 		"glsl",
-=======
->>>>>>> 3e64678 (Working config)
 	},
 	highlight = {
 		enable = true,
