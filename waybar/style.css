@@ -1,37 +1,59 @@
-*{
-		font-family: "0xProto Nerd Font", sans-serif;
-		font-size:14px;
-		border: none;
-		border-radius:0;
-}
-window#waybar{
-		background: rgba(30,0,46,0.7);
-		color: #fff;
-		border-radius: 10px;
+* {
+	font-family: "0xProto Nerd Font", sans-serif;
+	font-size: 14px;
+	border: none;
+	border-radius: 0;
+	margin: 0;
 }
 
-
+window#waybar {
+	background: rgba(30, 0, 46, 0.7);
+	color: #fff;
+	padding: 30px 0px;
+}
+.modules-left{
+		margin-left: 5px;
+}
+.modules-right{
+		margin-right: 5px;
+}
 #workspaces button {
-		padding: 0 3px;
-		color: #6c7086;
-		border-radius: 10px;
-		background: transparent;
+	padding: 4px 3px;
+	color: #6c7086;
+	border-radius: 10px;
+	background: transparent;
 }
-#workspaces button.active{
-		color: #b004fa;
+
+#workspaces button.active {
+	color: #7300ff;
+	padding: 0 4px 0 2px;
 }
-#clock, #battery,#network,#pulseaudio{
-		padding: 0 5px;
-		margin: 5px 3px;
-		background: rgba(90,5,98,0.6);
-		border-radius:8px;
+
+#workspaces {
+	padding-left: 4px;
 }
-#battery.charging{
-		color: #46f341;
+
+#battery,
+#network,
+#pulseaudio {
+	padding: 4px 5px;
+	margin: 5px 3px;
+	background: rgba(90, 5, 98, 0.6);
+	border-radius: 8px;
 }
-#battery.waning{
-		color: #fab337;
+#clock{
+
+	padding: 4px 5px;
 }
-#battery.critical{
-		color: #f33b48;
+
+#battery.charging {
+	color: #46f341;
+}
+
+#battery.warning {
+	color: #fab337;
+}
+
+#battery.critical {
+	color: #f33b48;
 }

@@ -54,3 +54,4 @@ rmvenv() {
       rm -r $VENV_HOME/$1
   fi
 }
+export PATH="$HOME/.local/bin:$PATH"

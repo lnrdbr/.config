@@ -1,0 +1,40 @@
+[[themes]]
+name = "dark-orchid"
+
+[themes.palette]
+foreground = "#d4d4d8"
+black = "#18181b" # Zinc 950
+red = "#dc2626" # Red 600
+green = "#16a34a" # Green 600
+yellow = "#ca8a04" # Yellow 600
+blue = "#2563eb" # Blue 600
+magenta = "#db2777" # Pink 600
+cyan = "#0891b2" # Cyan 600
+white = "#d4d4d8" # Zinc 300
+bright_black = "#18181b" # Zinc 950
+bright_red = "#dc2626" # Red 600
+bright_green = "#16a34a" # Green 600
+bright_yellow = "#ca8a04" # Yellow 600
+bright_blue = "#2563eb" # Blue 600
+bright_magenta = "#db2777" # Pink 600
+bright_cyan = "#0891b2" # Cyan 600
+bright_white = "#d4d4d8" # Zinc 300
+
+[themes.component_style]
+playback_progress_bar = { fg = "#7300ff" }
+playback_progress_bar_unfilled = { fg = "#d4d4d8" }
+border = { fg = "#3f3f46" }
+block_title = { fg = "#d4d4d8" }
+current_playing = { bg = "#7300ff", fg = "#000000" }
+selection = { fg = "#d4d4d8", bg = "#3f3f46" }
+playback_status = { fg = "#71717a" }
+playback_track = { fg = "#d4d4d8" }
+playback_artists = { fg = "#d4d4d8" }
+playback_album = { fg = "#d4d4d8" }
+playback_genres = { fg = "#d4d4d8" }
+playback_metadata = { fg = "#71717a", modifiers = ["Italic"] }
+table_header = { fg = "#71717a" }
+page_desc = { fg = "#71717a", modifiers = ["Italic"] }
+secondary_row = { fg = "#d4d4d8" } # TODO(simonkov): usage unclear
+lyrics_played = { fg = "#71717a" }
+lyrics_playing = { bg = "#7300ff", fg = "#000000" }
