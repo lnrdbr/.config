@@ -14,6 +14,7 @@ local lsps = {
 	"emmet_ls",
 	"zls",
 	"bashls",
+		"gopls"
 }
 
 require("mason").setup()

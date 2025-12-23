@@ -13,7 +13,7 @@ autoload -Uz compinit && compinit
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 export PATH=$PATH:$HOME/.local/share/bob/nvim-bin
-
+export PATH=$PATH:$HOME/.local/bin
 
 
 # $ mkvenv myvirtualenv # creates venv under ~/.virtualenvs/
