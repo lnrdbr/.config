@@ -4,7 +4,9 @@ local lsps = {
 	"svelte",
 	"tinymist",
 	"rust_analyzer",
+	"clangd",
 	"ruff",
+	"glsl_analyzer",
 	"intelephense",
 	"tailwindcss",
 	"ts_ls",
@@ -12,6 +14,7 @@ local lsps = {
 	"emmet_ls",
 	"zls",
 	"bashls",
+		"gopls"
 }
 
 require("mason").setup()
