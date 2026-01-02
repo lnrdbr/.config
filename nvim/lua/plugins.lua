@@ -12,6 +12,7 @@ vim.pack.add({
 	{ src = "https://github.com/L3MON4D3/LuaSnip" },
 	{ src = "https://github.com/windwp/nvim-autopairs" },
 	{ src = "https://github.com/windwp/nvim-ts-autotag" },
+	{ src = "https://github.com/zk-org/zk-nvim" },
 })
 
 -- Plugin configurations
@@ -71,6 +72,20 @@ require("nvim-ts-autotag").setup({
 		enable_close = true,
 		enable_rename = true,
 		enable_close_on_slash = true,
+	},
+})
+
+require("zk").setup({
+	picker = "mini.pick",
+	lsp = {
+		config = {
+			cmd = { "zk", "lsp" },
+			name = "zk",
+		},
+		auto_attach = {
+			enabled = true,
+			filetypes = { "markdown" },
+		},
 	},
 })
 

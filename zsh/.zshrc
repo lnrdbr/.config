@@ -14,7 +14,8 @@ zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 export PATH=$PATH:$HOME/.local/share/bob/nvim-bin
 export PATH=$PATH:$HOME/.local/bin
-
+export ZK_NOTEBOOK_DIR="$HOME/documents/notes"
+alias rcryptsync="rclone bisync ~/documents pcrypt:documents --filter-from ~/.config/rclone/filter.txt --resync --progress"
 
 # $ mkvenv myvirtualenv # creates venv under ~/.virtualenvs/
 # $ venv myvirtualenv   # activates venv

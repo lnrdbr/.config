@@ -8,8 +8,10 @@
 		"hyprland/workspaces":{
 				"format":"{icon}",
 				"format-icons":{
-						"active":""
-				}
+						"active":"",
+						"default":""
+
+				},
 		},
 		"clock":{
 				"format": "{:%d %H:%M}",

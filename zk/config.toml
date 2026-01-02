@@ -1,0 +1,7 @@
+# NOTEBOOK SETTINGS
+[notebook]
+dir = "~/documents/notes/"
+[note]
+filename = "{{format-date now 'timestamp'}}-{{slug title}}-{{id}}"
+[tool]
+editor = "nvim"

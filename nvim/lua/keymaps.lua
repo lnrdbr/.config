@@ -14,3 +14,12 @@ map("i", "jk", "<Esc>", { noremap = true })
 
 map({ "n", "x" }, "<leader>y", '"+y')
 map({ "n", "x" }, "<leader>d", '"+d')
+
+-- zk notes
+map('n', '<leader>zn', ":ZkNew { title = vim.fn.input('Title: ') }<CR>")
+map('n', '<leader>zo', ":ZkNotes<CR>")
+map('n', '<leader>zt', ":ZkTags<CR>")
+map('n', '<leader>zf', ":ZkNotes { match = { vim.fn.input('Search: ') } }<CR>")
+map('v', '<leader>zn', ":'<,'>ZkNewFromTitleSelection<CR>")
+map('n', '<leader>zl', ":ZkLinks<CR>")
+map('n', '<leader>zb', ":ZkBacklinks<CR>")

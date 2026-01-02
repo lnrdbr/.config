@@ -75,6 +75,10 @@
     "typst-preview.nvim": {
       "rev": "291972a39db85c5d2e76249748aba4206dfd3bc2",
       "src": "https://github.com/chomosuke/typst-preview.nvim"
+    },
+    "zk-nvim": {
+      "rev": "8df80d0dc2d66e53b08740361a600746a6e4edcf",
+      "src": "https://github.com/zk-org/zk-nvim"
     }
   }
 }
