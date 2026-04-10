@@ -1,4 +1,5 @@
 vim.pack.add({
+	{ src = "https://github.com/NvChad/nvim-colorizer.lua" },
 	{ src = "https://github.com/stevearc/oil.nvim" },
 	{ src = "https://github.com/echasnovski/mini.pick" },
 	{ src = "https://github.com/navarasu/onedark.nvim" },
@@ -13,9 +14,28 @@ vim.pack.add({
 	{ src = "https://github.com/windwp/nvim-autopairs" },
 	{ src = "https://github.com/windwp/nvim-ts-autotag" },
 	{ src = "https://github.com/zk-org/zk-nvim" },
+	{ src = "https://github.com/pimalaya/himalaya-vim" },
 })
 
 -- Plugin configurations
+require("colorizer").setup({
+	filetypes = { "*" },
+	user_default_options = {
+		RGB = true,
+		RRGGBB = true,
+		names = false,
+		RRGGBBAA = true,
+		AARRGGBB = true,
+		rgb_fn = true,
+		hsl_fn = true,
+		css = true,
+		css_fn = true,
+		mode = "background",
+		tailwind = true,
+		virtualtext = "■",
+	},
+})
+
 require("todo-comments").setup()
 
 require("mini.pick").setup()

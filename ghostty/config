@@ -1,0 +1,18 @@
+font-family = 0xProto Nerd Font Mono
+font-size = 25
+
+theme = Purple Rain
+background = 181818
+palette = 5=#7300ff
+palette = 13=#7300ff
+cursor-color = #9b59ff
+
+window-padding-x = 10
+window-padding-y = 10
+window-padding-color = background
+background-opacity = 1.0
+window-decoration = false
+macos-window-shadow = false
+
+keybind = super+c=copy_to_clipboard
+keybind = super+v=paste_from_clipboard

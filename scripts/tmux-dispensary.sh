@@ -4,7 +4,9 @@ DIRS=(
     "$HOME/documents"
     "$HOME/documents/projects"
     "$HOME/desktop"
-    "$HOME/documents/solent"
+	"$HOME/Developer"
+    "$HOME/documents/notes"
+    "$HOME/documents/notes/EDU"
     "$HOME"
 )
 

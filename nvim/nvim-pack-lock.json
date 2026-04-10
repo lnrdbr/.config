@@ -8,6 +8,10 @@
       "rev": "d4ba3e7c39543e588d1569532cbdd03d73d20c39",
       "src": "https://github.com/saghen/blink.cmp"
     },
+    "himalaya-vim": {
+      "rev": "978f2b463c4ece28f5e1457029d399638e439704",
+      "src": "https://github.com/pimalaya/himalaya-vim"
+    },
     "icon-picker.nvim": {
       "rev": "3ee9a0ea9feeef08ae35e40c8be6a2fa2c20f2d3",
       "src": "https://github.com/ziontee113/icon-picker.nvim"
@@ -35,6 +39,10 @@
     "nvim-autopairs": {
       "rev": "d9e44e54384e5b0f3536339c65484f2e41b528e3",
       "src": "https://github.com/windwp/nvim-autopairs"
+    },
+    "nvim-colorizer.lua": {
+      "rev": "338409dd8a6ed74767bad3eb5269f1b903ffb3cf",
+      "src": "https://github.com/NvChad/nvim-colorizer.lua"
     },
     "nvim-lspconfig": {
       "rev": "0044d0987ef7e624d04141d0f90d0481fd3c3663",

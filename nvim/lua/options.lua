@@ -8,8 +8,8 @@ vim.o.signcolumn = "yes"
 vim.o.winborder = "rounded"
 vim.o.showmode = false
 vim.o.undofile = true
+vim.o.timeoutlen = 400
 
 vim.g.mapleader = ' '
 vim.g.have_nerd_font = true
-
 vim.cmd("set completeopt+=noselect")

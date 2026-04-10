@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "create-dev": "^0.0.2",
+    "create-storybook": "^10.2.7",
+    "create-vite": "^9.0.3"
+  }
+}

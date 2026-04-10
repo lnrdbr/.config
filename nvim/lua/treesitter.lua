@@ -16,6 +16,7 @@ require('nvim-treesitter.configs').setup({
 		"markdown",
 		"typst",
 		"glsl",
+		"dart",
 	},
 	highlight = {
 		enable = true,
