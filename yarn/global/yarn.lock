@@ -266,10 +266,15 @@ create-storybook@^10.2.7:
     semver "^7.7.3"
     storybook "10.2.7"
 
-create-vite@^9.0.3:
-  version "9.0.3"
-  resolved "https://registry.yarnpkg.com/create-vite/-/create-vite-9.0.3.tgz#18f608b82de327f6bc73442b111802dab0a66619"
-  integrity sha512-eYcVOj/fzVEDFjjEURP93TTC11CmOHtnbeTz1/aEEnL+O1dEyEYzfPWE/JfxbksQ9ztlkxMZ5XG3KjVGDks0xw==
+create-svelte@^7.0.1:
+  version "7.0.1"
+  resolved "https://registry.yarnpkg.com/create-svelte/-/create-svelte-7.0.1.tgz#6e3062ae39a2c99655c4b2b43341fee8e79a83c4"
+  integrity sha512-kO0CtIH8DJa7kig8o4nAsj0eXhO410zIfh45E6Q0QxkVCFkVdysSrH5x93BQXLn3MzJda5Y3X0TSxSVfX83JDA==
+
+create-vite@^9.0.4:
+  version "9.0.4"
+  resolved "https://registry.yarnpkg.com/create-vite/-/create-vite-9.0.4.tgz#e0347bed61ca55a4e601d8582c5eb63bb0eae791"
+  integrity sha512-cLLAIww7mjtibQvLzAH3yUCtOHnOpoqwF+JQbP/5YOYHZmY1usi9xY2t5hXsvTx0lPTcfpEs6at345z79WeFSw==
 
 css.escape@^1.5.1:
   version "1.5.1"

@@ -15,17 +15,33 @@ outer.bottom = 0
 outer.top = 1
 outer.right = 0
 
+# Anchor the core dev workflow to the MacBook screen so unplugging the
+# external monitors never disturbs it. The LG workspaces fall back to the
+# built-in screen when their monitor is disconnected.
+[workspace-to-monitor-force-assignment]
+1 = 'built-in'                            # browser
+2 = 'built-in'                            # terminal / tmux (core dev)
+10 = ['ultrafine \(1\)', 'built-in']      # left external (regex: parens escaped)
+11 = ['ultrafine \(2\)', 'built-in']      # right external (regex: parens escaped)
+
 [mode.main.binding]
 alt-slash = 'layout tiles horizontal vertical'
 alt-comma = 'layout tiles horizontal horizontal'
 alt-cmd-m = 'resize smart -50'
 alt-cmd-i = 'resize smart +50'
-alt-shift-h = 'move-mouse monitor-force-center'
 
 alt-h = 'focus left'
 alt-j = 'focus down'
 alt-k = 'focus up'
 alt-l = 'focus right'
+
+# Switch focus between monitors (capital vim moves, cycle prev/next)
+alt-shift-h = 'focus-monitor --wrap-around prev'
+alt-shift-l = 'focus-monitor --wrap-around next'
+
+# Throw the focused window to the prev/next monitor (and follow it)
+alt-cmd-h = 'move-node-to-monitor --wrap-around --focus-follows-window prev'
+alt-cmd-l = 'move-node-to-monitor --wrap-around --focus-follows-window next'
 
 alt-1 = 'workspace 1'
 alt-2 = 'workspace 2'
@@ -36,15 +52,19 @@ alt-6 = 'workspace 6'
 alt-7 = 'workspace 7'
 alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
+alt-0 = 'workspace 10' # left LG external
 
 alt-a = 'workspace 2' # Alacritty
 alt-n = 'workspace 1' # Firefox
-alt-shift-s = 'workspace S' # Spotify
+alt-s = 'workspace S' # Spotify
 alt-g = 'workspace G' # Messages
-alt-shift-d = 'workspace F' # Finder
-alt-shift-k = 'workspace K' # Keepassxc
-# alt-v = 'workspace V' # Davinci
+alt-d = 'workspace F' # Finder
+alt-p = 'workspace P' # 1Password
+alt-m = "workspace M" # Discord
+alt-w = "workspace W" # Whatsapp
 alt-o = 'workspace o' # OBS
+alt-u = 'workspace U' # Obsidian
+alt-c = 'workspace C' # Obsidian
 
 alt-shift-1 = 'move-node-to-workspace 1'
 alt-shift-2 = 'move-node-to-workspace 2'
@@ -55,10 +75,11 @@ alt-shift-6 = 'move-node-to-workspace 6'
 alt-shift-7 = 'move-node-to-workspace 7'
 alt-shift-8 = 'move-node-to-workspace 8'
 alt-shift-9 = 'move-node-to-workspace 9'
+alt-shift-0 = 'move-node-to-workspace 10' # send window to left LG external
 alt-shift-m = 'move-workspace-to-monitor --wrap-around next'
 
 [[on-window-detected]]
-if.app-id = 'org.alacritty'
+if.app-id = 'net.kovidgoyal.kitty'
 run = 'move-node-to-workspace 2'
 
 [[on-window-detected]]
@@ -66,12 +87,24 @@ if.app-id = 'app.zen-browser.zen'
 run = 'move-node-to-workspace 1'
 
 [[on-window-detected]]
+if.app-id = 'com.tinyapp.TablePlus'
+run = 'move-node-to-workspace 4'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.dt.Xcode'
+run = 'move-node-to-workspace 3'
+
+[[on-window-detected]]
+if.app-id = 'md.obsidian'
+run = 'move-node-to-workspace U'
+
+[[on-window-detected]]
 if.app-id = 'com.spotify.client'
 run = 'move-node-to-workspace S'
 
 [[on-window-detected]]
-if.app-id = 'org.keepassxc.keepassxc'
-run = 'move-node-to-workspace K'
+if.app-id = 'com.1password.1password'
+run = 'move-node-to-workspace P'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.finder'
@@ -82,12 +115,19 @@ if.app-id = 'com.apple.MobileSMS'
 run = 'move-node-to-workspace G'
 
 [[on-window-detected]]
+if.app-id = 'com.apple.iCal'
+run = 'move-node-to-workspace C'
+[[on-window-detected]]
 if.app-id = 'com.figma.Desktop'
 run = 'move-node-to-workspace f'
 
 [[on-window-detected]]
-if.app-id = 'com.spikehd.dorion'
-run = 'move-node-to-workspace D'
+if.app-id = 'com.hnc.Discord'
+run = 'move-node-to-workspace M'
+
+[[on-window-detected]]
+if.app-id = 'net.whatsapp.WhatsApp'
+run = 'move-node-to-workspace W'
 
 [[on-window-detected]]
 if.app-id = 'com.obsproject.obs-studio'
@@ -96,3 +136,7 @@ run = 'move-node-to-workspace o'
 [[on-window-detected]]
 if.app-id = 'org.pwmt.zathura'
 run = ['layout tiles horizontal', 'move right']
+
+[[on-window-detected]]
+if.app-id = 'com.ableton.live'
+run = ['layout floating', 'macos-native-fullscreen off']

@@ -19,4 +19,4 @@ pdf=$(find "$dir" -maxdepth 3 -type f -name "*.pdf" 2>/dev/null | \
 [[ -z "$pdf" ]] && exit 0
 
 # Open with zathura
-zathura "$dir/$pdf"
+sioyek "$dir/$pdf"
